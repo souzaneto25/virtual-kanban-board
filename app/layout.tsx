@@ -28,7 +28,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div>
+          <h1 className="text-3xl font-bold text-center mb-6 pt-4">
+            Kanban Board
+          </h1>
+          {children}
+        </div>
       </body>
     </html>
   );

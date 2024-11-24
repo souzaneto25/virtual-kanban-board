@@ -8,10 +8,20 @@ import {
 } from "@dnd-kit/sortable";
 import { Column } from "../types";
 import SortableCard from "./KanbanCard";
+import { useVirtualizer } from "@tanstack/react-virtual";
 
 const KanbanColumn = ({ id, title, tasks }: Column) => {
   const { setNodeRef } = useDroppable({
     id,
+  });
+
+  const parentRef = React.useRef<HTMLDivElement>(null);
+
+  const rowVirtualizer = useVirtualizer({
+    count: tasks.length,
+    getScrollElement: () => parentRef.current,
+    estimateSize: () => 90, // Altura estimada de cada item
+    overscan: 5, // Renderizar itens extras fora do viewport
   });
 
   return (
@@ -25,9 +35,40 @@ const KanbanColumn = ({ id, title, tasks }: Column) => {
           items={tasks.map((task) => task.id)}
           strategy={verticalListSortingStrategy}
         >
-          {tasks.map((task) => (
-            <SortableCard key={task.id} id={task.id} title={task.title} />
-          ))}
+          <div
+            ref={parentRef}
+            style={{ overflow: "auto", height: "600px" }}
+            className="relative"
+          >
+            <div
+              style={{
+                height: `${rowVirtualizer.getTotalSize()}px`,
+                position: "relative",
+              }}
+            >
+              {rowVirtualizer.getVirtualItems().map((virtualRow) => {
+                const task = tasks[virtualRow.index];
+                return (
+                  <div
+                    key={task.id}
+                    ref={(el) => {
+                      if (el) {
+                        rowVirtualizer.measureElement(el);
+                      }
+                    }}
+                    data-index={virtualRow.index}
+                    style={{
+                      position: "absolute",
+                      top: `${virtualRow.start}px`,
+                      width: "100%",
+                    }}
+                  >
+                    <SortableCard id={task.id} title={task.title} />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </SortableContext>
       </div>
     </div>
@@ -35,5 +76,3 @@ const KanbanColumn = ({ id, title, tasks }: Column) => {
 };
 
 export default KanbanColumn;
-
-// Componente para um card que pode ser ordenado

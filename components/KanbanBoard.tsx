@@ -23,12 +23,12 @@ const initialData: Column[] = [
   {
     id: "in-progress",
     title: "In Progress",
-    tasks: generateCards(3, "in-progress"),
+    tasks: generateCards(12302, "in-progress"),
   },
   {
     id: "done",
     title: "Done",
-    tasks: generateCards(1, "done"),
+    tasks: generateCards(12231, "done"),
   },
 ];
 

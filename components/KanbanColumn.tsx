@@ -19,7 +19,7 @@ const KanbanColumn = ({ id, title, tasks }: Column) => {
       <h3 className="mb-3 text-lg font-bold">{title}</h3>
       <div
         ref={setNodeRef}
-        className="flex flex-col min-h-[600px] bg-gray-100 rounded-lg p-3 shadow-md"
+        className="flex flex-col min-h-[600px] h-full bg-gray-100 rounded-lg p-3 shadow-md"
       >
         <SortableContext
           items={tasks.map((task) => task.id)}

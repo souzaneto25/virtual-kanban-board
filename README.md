@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# **Kanban with Virtualization**
 
-## Getting Started
+### **Descrição**
 
-First, run the development server:
+Este projeto é uma aplicação de **quadro Kanban** desenvolvida com o objetivo de demonstrar como criar uma solução performática e escalável utilizando tecnologias modernas de otimização, como **virtualização** e frameworks avançados. A aplicação é capaz de lidar com grandes volumes de tarefas, mantendo uma interface fluida.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## **Funcionalidades**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 🚀 **Virtualização:** Renderização eficiente de listas de tarefas para garantir alto desempenho, mesmo com milhares de itens.
+- 💻 **Stack Tecnológica Moderna:** Utiliza **Next.js**, **TypeScript** e **@dnd-kit** para criar uma experiência interativa e otimizada.
+- ⚡ **Alto Desempenho:** Projetado para escalar e suportar grandes cargas de tarefas e colunas sem perda de usabilidade.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## **Tecnologias Utilizadas**
 
-To learn more about Next.js, take a look at the following resources:
+- **[Next.js](https://nextjs.org/):** Framework React para renderização do lado do servidor (SSR) e roteamento.
+- **[TypeScript](https://www.typescriptlang.org/):** Superset de JavaScript que adiciona tipagem estática para maior segurança e produtividade.
+- **[@dnd-kit](https://dndkit.com/):** Biblioteca robusta para implementar funcionalidade de drag-and-drop.
+- **[React Virtualized](https://github.com/bvaughn/react-virtualized)** ou **[React-Window](https://github.com/bvaughn/react-window):** Para virtualização e otimização de listas longas.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## **Como Executar o Projeto**
 
-## Deploy on Vercel
+### **Pré-requisitos**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Certifique-se de ter o seguinte instalado:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Node.js** (versão 14 ou superior)
+- **npm** ou **yarn**
+
+### **Instalação**
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/kanban-with-virtualization.git
+   cd kanban-with-virtualization
+   npm install
+   ```

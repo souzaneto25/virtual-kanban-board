@@ -12,25 +12,23 @@ import { createPortal } from "react-dom";
 import { Task, Column } from "../types";
 import KanbanColumn from "./KanbanColumn";
 import SortableCard from "./KanbanCard";
+import { generateCards } from "@/utils/generateCards";
 
 const initialData: Column[] = [
   {
     id: "todo",
     title: "To Do",
-    tasks: [
-      { id: "task-1", title: "Task 1" },
-      { id: "task-2", title: "Task 2" },
-    ],
+    tasks: generateCards(500, "todo"),
   },
   {
     id: "in-progress",
     title: "In Progress",
-    tasks: [{ id: "task-3", title: "Task 3" }],
+    tasks: generateCards(3, "in-progress"),
   },
   {
     id: "done",
     title: "Done",
-    tasks: [{ id: "task-4", title: "Task 4" }],
+    tasks: generateCards(1, "done"),
   },
 ];
 

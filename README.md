@@ -19,7 +19,7 @@ Este projeto é uma aplicação de **quadro Kanban** desenvolvida com o objetivo
 - **[Next.js](https://nextjs.org/):** Framework React para renderização do lado do servidor (SSR) e roteamento.
 - **[TypeScript](https://www.typescriptlang.org/):** Superset de JavaScript que adiciona tipagem estática para maior segurança e produtividade.
 - **[@dnd-kit](https://dndkit.com/):** Biblioteca robusta para implementar funcionalidade de drag-and-drop.
-- **[React Virtualized](https://github.com/bvaughn/react-virtualized)** ou **[React-Window](https://github.com/bvaughn/react-window):** Para virtualização e otimização de listas longas.
+- **[@tanstack/react-virtual](https://github.com/TanStack/virtual):** Para virtualização e otimização de listas longas.
 
 ---
 

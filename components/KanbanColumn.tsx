@@ -20,8 +20,8 @@ const KanbanColumn = ({ id, title, tasks }: Column) => {
   const rowVirtualizer = useVirtualizer({
     count: tasks.length,
     getScrollElement: () => parentRef.current,
-    estimateSize: () => 90, // Altura estimada de cada item
-    overscan: 5, // Renderizar itens extras fora do viewport
+    estimateSize: () => 90,
+    overscan: 5,
   });
 
   return (
